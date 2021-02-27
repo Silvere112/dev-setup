@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -u -e
 
-source ./core/constants.sh
-source ./core/packages.sh
-source ./core/required.sh
+source "${BASH_SOURCE%/*}/core/constants.sh"
+source "${BASH_SOURCE%/*}/core/packages.sh"
+source "${BASH_SOURCE%/*}/core/required.sh"
 
 if [ $# -eq 1 ] && [ "$1" = "list" ]; then
   list_packages
@@ -22,4 +22,4 @@ if [ $# -gt 2 ] && [ "$1" = "install" ] && [ "$2" = "-o" ]; then
   exit 0
 fi
 
-cat help.txt
+cat "${BASH_SOURCE%/*}/help.txt"

@@ -1,14 +1,14 @@
-source core/scripts.sh
+source "${BASH_SOURCE%/*}/scripts.sh"
 
 list_packages() {
-  for script_path in "$package_scripts_folder"/*."$script_extension"; do
+  for script_path in "${BASH_SOURCE%/*}/../$package_scripts_folder"/*."$script_extension"; do
     package_name_of "$script_path"
   done
 }
 
 install_all_packages() {
   set +e
-  install_all_scripts_in "$package_scripts_folder"
+  install_all_scripts_in "${BASH_SOURCE%/*}/../$package_scripts_folder"
 }
 
 install_packages() {
@@ -21,7 +21,7 @@ install_packages() {
 
 install_package() {
   local software=$1
-  install_script "$package_scripts_folder/$software.$script_extension"
+  install_script "${BASH_SOURCE%/*}/../$package_scripts_folder/$software.$script_extension"
 }
 
 
