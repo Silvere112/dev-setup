@@ -12,3 +12,5 @@ EXEMPLE:
     Install only one package
 
 All scripts should be idempotent
+
+TODO: Script d'installation sans cloner le repo
