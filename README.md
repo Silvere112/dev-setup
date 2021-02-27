@@ -1,16 +1,4 @@
-USAGE:
-    ./main [ACTION] [OPTIONS]
-
-EXEMPLE:
-./main list
-    List all available package
-
-./main install -a
-    Install all packages available
-
-./main install -o <name1> <name2>
-    Install only one package
-
+TODO: readme
 All scripts should be idempotent
 
-TODO: Script d'installation sans cloner le repo
+curl -s -S -L https://raw.githubusercontent.com/Silvere112/install-dev-env/main/install.sh | bash

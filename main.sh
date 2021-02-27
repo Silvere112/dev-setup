@@ -22,4 +22,4 @@ if [ $# -gt 2 ] && [ "$1" = "install" ] && [ "$2" = "-o" ]; then
   exit 0
 fi
 
-cat README.md
+cat help.txt
