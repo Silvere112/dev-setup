@@ -1,0 +1,1 @@
+curl -fail "google.com"
