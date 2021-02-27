@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -u -e
 
-source core/constants.sh
-source core/packages.sh
-source core/required.sh
+source ./core/constants.sh
+source ./core/packages.sh
+source ./core/required.sh
 
 if [ $# -eq 1 ] && [ "$1" = "list" ]; then
   list_packages
