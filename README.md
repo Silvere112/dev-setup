@@ -2,13 +2,14 @@
 Install easily your developer environment.
 
 Supported software:
-* Docker
-* Nvm
-* Jetbrains Toolbox
-* Google Chrome
-* Pyenv
-* Sdkman
-* Teams
+
+:whale: Docker <br/>
+:snake: Pyenv <br/>
+:office: Teams <br/>
+:wrench: Jetbrains Toolbox <br/>
+:earth_americas: Google Chrome <br/>
+:hammer: Nvm <br/>
+:nut_and_bolt: Sdkman <br/>
 
 ## Installation
 
@@ -17,7 +18,7 @@ Supported software:
 curl -s -S -L https://raw.githubusercontent.com/Silvere112/install-dev-env/main/install.sh | bash
 ```
 
-### 2. Install specific software
+### 2. Install a specific package
 ```bash
 sudo apt-get install git
 git clone https://github.com/Silvere112/install-dev-env.git
@@ -25,7 +26,7 @@ install-dev-env/main.sh install -o docker nvm
 ```
 
 ## Rules
-* All scripts should be idempotent
+* All installation should be idempotent
 
 ## Improvements
 * Add confirmation message before installing all and list what will be installed
