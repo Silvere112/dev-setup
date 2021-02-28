@@ -15,14 +15,14 @@ Supported software (contributions are welcome):
 
 ### 1. Installing all with one line
 ```bash
-curl -s -S -L https://raw.githubusercontent.com/Silvere112/install-dev-env/main/install.sh | bash
+curl -s -S -L https://raw.githubusercontent.com/Silvere112/dev-setup/main/install.sh | bash
 ```
 
 ### 2. Install a specific package
 ```bash
 sudo apt-get install git
-git clone https://github.com/Silvere112/install-dev-env.git
-install-dev-env/main.sh install -o docker nvm
+git clone https://github.com/Silvere112/dev-setup.git
+dev-setup/main.sh install -o docker nvm
 ```
 
 ## More information
