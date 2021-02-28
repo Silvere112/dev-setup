@@ -1,14 +1,10 @@
-USAGE:
-    ./main [ACTION] [OPTIONS]
-
-EXEMPLE:
 ./main list
     List all available package
 
-./main install -a
+./main install
     Install all packages available
 
-./main install -o <name1> <name2>
+./main install <name1> <name2>
     Install only one package
 
 

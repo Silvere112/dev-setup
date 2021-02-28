@@ -22,7 +22,7 @@ curl -s -S -L https://raw.githubusercontent.com/Silvere112/dev-setup/main/instal
 ```bash
 sudo apt-get install git
 git clone https://github.com/Silvere112/dev-setup.git
-dev-setup/main.sh install -o docker nvm
+dev-setup/main.sh install docker nvm
 ```
 
 ## More information
@@ -30,9 +30,6 @@ dev-setup/main.sh install -o docker nvm
 * Idempotent installation
 
 ## Next improvements
-- Improve CLI :
-  * main.sh install | should install all
-  * main.sh install docker nvm | should install docker and nvm
 - Install the latest version and not a specific (Example : Jetbrains Toolbox & Nvm)
 - Add confirmation message before installing all and list what will be installed
 - Improve error messaging when package does not exist

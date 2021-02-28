@@ -10,16 +10,29 @@ if [ $# -eq 1 ] && [ "$1" = "list" ]; then
   exit 0
 fi
 
-if [ $# -eq 2 ] && [ "$1" = "install" ] && [ "$2" = "-a" ]; then
+if [ $# -eq 1 ] && [ "$1" = "install" ] ; then
   install_required
   install_all_packages
   exit 0
 fi
 
-if [ $# -gt 2 ] && [ "$1" = "install" ] && [ "$2" = "-o" ]; then
+
+if [ $# -gt 1 ] && [ "$1" = "install" ]; then
   install_required
-  install_packages "${@:3}"
+  install_packages "${@:2}"
   exit 0
 fi
 
-cat "${BASH_SOURCE%/*}/help.txt"
+help=$(cat <<EOF
+./main.sh list
+    List all available package
+
+./main.sh install
+    Install all packages available
+
+./main.sh install docker nvm
+    Install only docker and nvm package
+EOF
+)
+
+echo "$help"
