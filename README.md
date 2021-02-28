@@ -31,7 +31,6 @@ dev-setup/main.sh install docker nvm
 * Idempotent installation
 
 ## Next improvements
-- Install the latest version and not a specific (Example : Jetbrains Toolbox & Nvm)
 - Add confirmation message before installing all and list what will be installed
 - Improve error messaging when package does not exist
 - Install all except specified packages
