@@ -1,3 +1,4 @@
+# FROM https://gist.github.com/greeflas/431bc50c23532eee8a7d6c1d603f3921
 if [ -d ~/.local/share/JetBrains/Toolbox ]; then
     echo "JetBrains Toolbox is already installed!"
     exit 0
