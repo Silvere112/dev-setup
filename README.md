@@ -1,15 +1,15 @@
 # Ubuntu Developer Setup
-Install easily your developer environment.
+Install easily your new developer environment
 
-Supported software:
+Supported software (contributions are welcome):
 
 :whale: Docker <br/>
 :snake: Pyenv <br/>
 :office: Teams <br/>
-:wrench: Jetbrains Toolbox <br/>
+:computer: Jetbrains Toolbox <br/>
 :earth_americas: Google Chrome <br/>
 :hammer: Nvm <br/>
-:nut_and_bolt: Sdkman <br/>
+:coffee: Sdkman <br/>
 
 ## Installation
 
@@ -25,10 +25,11 @@ git clone https://github.com/Silvere112/install-dev-env.git
 install-dev-env/main.sh install -o docker nvm
 ```
 
-## Rules
-* All installation should be idempotent
+## More information
+* Zero Dependencies
+* Idempotent installation
 
-## Improvements
+## Next improvements
 * Add confirmation message before installing all and list what will be installed
 * Improve CLI :
   * main.sh install | should install all
