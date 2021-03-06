@@ -31,7 +31,6 @@ dev-setup/main.sh install docker nvm
 * Idempotent installation
 
 ## Next improvements
-- Add confirmation message before installing all and list what will be installed
 - Improve error management when package does not exist
 - Install all except specified packages
 - Installing package that depend on another. Example: pyenv install 3.9.2, sdk install 11.0.10.j9-adpt, nvm install node, docker-compose depend on pip

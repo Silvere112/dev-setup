@@ -13,10 +13,3 @@ install_script() {
     echo "$delimiter $script_display_name installation failed $delimiter"
   fi
 }
-
-install_all_scripts_in() {
-  local scripts_path=$1
-  for script_path in "$scripts_path"/*."$script_extension"; do
-    install_script "$script_path"
-  done
-}
