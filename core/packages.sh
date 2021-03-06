@@ -3,14 +3,25 @@ source "${BASH_SOURCE%/*}/constants.sh"
 
 BASE_FOLDER="${BASH_SOURCE%/*}/.."
 
+confirm_and_install(){
+  local packages=$1
+  read -r -p "Do you want to install $packages? [y/N] " response
+  if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+  then
+    install "$packages"
+  fi
+}
+
+install(){
+    local packages=$1
+    validate_packages "$packages"
+    install_required
+    install_packages "$packages"
+}
+
 list_all_packages() {
   local scripts_path=("$BASE_FOLDER/$package_scripts_folder"/*."$script_extension")
   packages_name_of "${scripts_path[@]}"
-}
-
-install_all_packages() {
-  set +e
-  install_packages $(list_all_packages)
 }
 
 install_packages() {
@@ -25,7 +36,6 @@ install_package() {
   local package=$1
   install_script "$BASE_FOLDER/$package_scripts_folder/$package.$script_extension"
 }
-
 
 package_name_of() {
   local script_path=$1
@@ -58,4 +68,10 @@ verify_package(){
     echo "$help"
     exit 1
   fi
+}
+
+list_packages_in(){
+  local setup_file_name=$1
+  local packages=( $( cat "$BASE_FOLDER/$setup_folder/$setup_file_name" ) )
+  echo "${packages[@]}"
 }

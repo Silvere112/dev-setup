@@ -11,20 +11,17 @@ if [ $# -eq 1 ] && [ "$1" = "list" ]; then
 fi
 
 if [ $# -eq 1 ] && [ "$1" = "install" ] ; then
-  read -r -p "Do you want to install $(list_all_packages)? [y/N] " response
-  if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
-  then
-    install_required
-    install_all_packages
-  fi
+  confirm_and_install "$(list_all_packages)"
   exit 0
 fi
 
+if [ $# -eq 3 ] && [ "$1" = "install" ] && [ "$2" = "setup" ] ; then
+  confirm_and_install "$(list_packages_in "$3")"
+  exit 0
+fi
 
 if [ $# -gt 1 ] && [ "$1" = "install" ]; then
-  validate_packages "${@:2}"
-  install_required
-  install_packages "${@:2}"
+  install "${@:2}"
   exit 0
 fi
 
