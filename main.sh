@@ -16,7 +16,7 @@ if [ $# -eq 1 ] && [ "$1" = "install" ] ; then
 fi
 
 if [ $# -eq 3 ] && [ "$1" = "install" ] && [ "$2" = "setup" ] ; then
-  confirm_and_install "$(list_packages_in "$3")"
+  install "$(list_packages_in "$3")"
   exit 0
 fi
 

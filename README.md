@@ -12,29 +12,28 @@ Supported software (contributions are welcome):
 :coffee: Sdkman <br/>
 :postbox: Virtualbox <br/>
 
-## Installation
+## Installations
 
-### 1. Create & install your own reusable setup
+### Create & install your own reusable setup
 ```bash
 sudo apt-get install git
 git clone https://github.com/Silvere112/dev-setup.git
-echo "docker nvm" > dev-setup/setups/awesome-setup
+echo "docker nvm" > dev-setup/main/setups/awesome-setup
 dev-setup/main.sh install setup awesome-setup
 ```
 
-### 2. Install specific packages
+### Install specific packages
 ```bash
 sudo apt-get install git
 git clone https://github.com/Silvere112/dev-setup.git
 dev-setup/main.sh install docker nvm
 ```
 
-### 2. Installing all packages using one line
+### Installing your setup using one line
 ```bash
-curl -s -S -L https://raw.githubusercontent.com/Silvere112/dev-setup/main/install.sh | bash
+curl -s -S -L https://raw.githubusercontent.com/Silvere112/dev-setup/main/install.sh | bash -s my-setup
 ```
-
-
+You can fork the repository for adding your own setup file
 
 ## More information
 * Zero Dependencies

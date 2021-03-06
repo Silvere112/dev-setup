@@ -19,6 +19,5 @@ export help=$(cat <<EOF
 ./main.sh install docker nvm
     Install only docker and nvm package
 
-
 EOF
 )
