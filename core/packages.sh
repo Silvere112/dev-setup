@@ -1,7 +1,10 @@
 source "${BASH_SOURCE%/*}/scripts.sh"
+source "${BASH_SOURCE%/*}/constants.sh"
+
+BASE_FOLDER="${BASH_SOURCE%/*}/.."
 
 list_all_packages() {
-  local scripts_path=("${BASH_SOURCE%/*}/../$package_scripts_folder"/*."$script_extension")
+  local scripts_path=("$BASE_FOLDER/$package_scripts_folder"/*."$script_extension")
   packages_name_of "${scripts_path[@]}"
 }
 
@@ -19,8 +22,8 @@ install_packages() {
 }
 
 install_package() {
-  local software=$1
-  install_script "${BASH_SOURCE%/*}/../$package_scripts_folder/$software.$script_extension"
+  local package=$1
+  install_script "$BASE_FOLDER/$package_scripts_folder/$package.$script_extension"
 }
 
 
@@ -38,4 +41,21 @@ packages_name_of() {
     packages_name+="$(package_name_of "$script_path") "
   done
   echo "$packages_name"
+}
+
+
+validate_packages(){
+  local packages=$*
+  for package in $packages; do
+      verify_package "$package"
+  done
+}
+
+verify_package(){
+  local package=$1
+  if [ ! -f "$BASE_FOLDER/$package_scripts_folder/$package.$script_extension" ]; then
+    echo "Unknown package $package"
+    echo "$help"
+    exit 1
+  fi
 }
