@@ -15,7 +15,6 @@ confirm_and_install(){
 install(){
     local packages=$1
     validate_packages "$packages"
-    install_required
     install_packages "$packages"
 }
 

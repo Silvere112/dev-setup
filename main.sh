@@ -3,7 +3,6 @@ set -u -e
 
 source "${BASH_SOURCE%/*}/core/constants.sh"
 source "${BASH_SOURCE%/*}/core/packages.sh"
-source "${BASH_SOURCE%/*}/core/required.sh"
 
 if [ $# -eq 1 ] && [ "$1" = "list" ]; then
   list_all_packages
