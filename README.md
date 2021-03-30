@@ -31,7 +31,7 @@ dev-setup/main.sh install docker nvm
 
 ### Installing your setup using one line
 ```bash
-curl -s -S -L https://raw.githubusercontent.com/Silvere112/dev-setup/main/install.sh | bash -s my-setup
+curl -sSL https://raw.githubusercontent.com/Silvere112/dev-setup/main/install.sh | bash -s my-setup
 ```
 You can fork the repository for adding your own setup file
 
@@ -40,6 +40,7 @@ You can fork the repository for adding your own setup file
 * Idempotent installation
 
 ## Next improvements
+- Create a command for asking the reboot
 - Create setup from the latest command lines run
 - Install all except specified packages
 - Installing package that depend on another. Example: pyenv install 3.9.2, sdk install 11.0.10.j9-adpt, nvm install node, docker-compose depend on pip
