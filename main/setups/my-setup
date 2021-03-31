@@ -1,10 +1,12 @@
 curl
 wget
+git
 chrome
-docker
 jetbrains-toolbox
-nvm
-pyenv
 sdkman
 teams
 virtualbox
+homebrew
+brew-docker
+brew-nvm
+brew-pyenv

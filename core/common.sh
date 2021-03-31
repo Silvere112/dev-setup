@@ -1,5 +1,5 @@
 export main="main"
-export main="test" # uncomment for testing
+#export main="test" # uncomment for testing
 export scripts_folder="scripts"
 export setup_folder="$main/setups"
 export required_scripts_folder="$main/$scripts_folder/required"
