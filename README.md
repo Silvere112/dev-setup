@@ -10,7 +10,6 @@ Supported software (contributions are welcome):
 :earth_americas: Google Chrome <br/>
 :hammer: Nvm <br/>
 :coffee: Sdkman <br/>
-:postbox: Virtualbox <br/>
 
 ## Installations
 
