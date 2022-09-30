@@ -3,6 +3,7 @@ if [ -d ~/.local/share/JetBrains/Toolbox ]; then
     echo "JetBrains Toolbox is already installed!"
     exit 0
 fi
+sudo apt-get install fuse libfuse2 -y
 
 wget --show-progress -qO ./toolbox.tar.gz https://download-cf.jetbrains.com/toolbox/jetbrains-toolbox-1.14.5179.tar.gz
 
